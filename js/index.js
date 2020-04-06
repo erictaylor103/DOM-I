@@ -38,5 +38,46 @@ const siteContent = {
 };
 
 // Example: Update the img src for the logo
+
 let logo = document.getElementById("logo-img");
 logo.setAttribute('src', siteContent["nav"]["img-src"])
+
+//NAVIGATION MENU
+
+const navAnchorTags = document.querySelectorAll("nav a");
+const navContents = Object.values(siteContent.nav);
+
+function navigationLoop(){
+  for (let i = 0; i < navAnchorTags.length; i++) {
+    navAnchorTags[i].textContent = navContents[i];
+    
+  }
+}
+navigationLoop();
+
+//CTA TEXT - BUTTON - CIRCLE IMAGE
+
+let ctaText = document.querySelector("h1");
+ctaText.textContent = siteContent.cta.h1;
+
+let ctaButtonText = document.querySelector("button");
+ctaButtonText.textContent = siteContent.cta.button;
+
+let ctaImage = document.querySelector("#cta-img");
+ctaImage.src = "img/header-img.png"; //how do I set the src using the variables
+
+console.log(ctaText);
+console.log(ctaButtonText);
+console.log(ctaImage);
+
+
+//TOP CONTENT
+
+let TopH4Tags = document.querySelectorAll(".top-content .text-content h4");
+console.log(TopH4Tags);
+
+
+
+//let topContentTitles = document.querySelectorAll(".top-content .text-content h4");
+//topContentTitles.textContent = siteContent['main-content', 'features-h4'];
+//console.log(topContentTitles);
