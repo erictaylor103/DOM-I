@@ -50,7 +50,7 @@ const navContents = Object.values(siteContent.nav);
 function navigationLoop(){
   for (let i = 0; i < navAnchorTags.length; i++) {
     navAnchorTags[i].textContent = navContents[i];
-    
+
   }
 }
 navigationLoop();
@@ -66,18 +66,39 @@ ctaButtonText.textContent = siteContent.cta.button;
 let ctaImage = document.querySelector("#cta-img");
 ctaImage.src = "img/header-img.png"; //how do I set the src using the variables
 
-console.log(ctaText);
-console.log(ctaButtonText);
-console.log(ctaImage);
 
 
-//TOP CONTENT
+//TOP CONTENT H4 TAGS
 
-let TopH4Tags = document.querySelectorAll(".top-content .text-content h4");
-console.log(TopH4Tags);
+let h4Tags = document.querySelectorAll("h4");
+h4Tags[0].textContent = siteContent["main-content"]["features-h4"];
+h4Tags[1].textContent = siteContent["main-content"]["about-h4"];
+h4Tags[2].textContent = siteContent["main-content"]["services-h4"];
+h4Tags[3].textContent = siteContent["main-content"]["product-h4"];
+h4Tags[4].textContent = siteContent["main-content"]["vision-h4"];
 
 
 
-//let topContentTitles = document.querySelectorAll(".top-content .text-content h4");
-//topContentTitles.textContent = siteContent['main-content', 'features-h4'];
-//console.log(topContentTitles);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+console.log(h4Tags);
